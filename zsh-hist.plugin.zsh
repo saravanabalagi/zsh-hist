@@ -13,8 +13,8 @@ zsh-hist() {
 
   bindkey '^Q' push-history
   zle -N push-history .hist.push-history.widget
-
-  zle -N undo .hist.undo.widget
+  zle -N hist-undo .hist.undo.widget
+  bindkey '^_' hist-undo
 
   autoload -Uz add-zsh-hook
   :hist:precmd() {
